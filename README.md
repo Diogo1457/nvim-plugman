@@ -32,10 +32,10 @@ docker exec -it nvim_plugman bash
 ``` 
 
 ## Data Structure
+- ### *Current Plugins Supported*
+- ### category: {plugin: [use_command, [config.split("\n")]} 
 ```json
 {
-    // *Current Plugins Supported*
-    // category: {plugin: [use_command, [config.split("\n")]} 
     "Autocomplete and Linting": {
         "Mason": [
             "use {'williamboman/mason.nvim', requires = { {'williamboman/mason-lspconfig.nvim'} }}", 
