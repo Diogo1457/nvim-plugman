@@ -1,41 +1,4 @@
-# Nvim-PlugMan
-
-# Install and configure Neovim Plugins via a python CLI
-
-## Install
-
-```bash
-# Requires
-sudo apt install -y python3 git curl 
-
-# Optional for the Mason-lspconfig
-sudo apt install python3-pip npm
-
-git clone https://github.com/Diogo1457/nvim-plugman.git
-
-# Run
-python3 nvim_plugman/src/main.py
-```
-
-## After installing a plugin, when you open neovim you will probably get an error. Run :PackerSync in neovim to fix the error.
-
-## Develop
-- ### Some functions, like 'Repair Plugin Config' and 'Uninstall Plugin' are not ready yet.
-- ### If you want to test the app you can do it using the Dockerfile provided
-```bash
-# Build Image
-docker build -t test_nvim_plug .
-# Run Docker Container
-docker run -d -t --name nvim_plugman test_nvim_plug
-# Container Shell
-docker exec -it nvim_plugman bash
-``` 
-
-## Data Structure
-```json
 {
-    // *Current Plugins Supported*
-    // category: {plugin: [use_command, [config.split("\n")]} 
     "Autocomplete and Linting": {
         "Mason": [
             "use {'williamboman/mason.nvim', requires = { {'williamboman/mason-lspconfig.nvim'} }}", 
@@ -146,7 +109,3 @@ docker exec -it nvim_plugman bash
         "Indent-Blankline": ["use 'lukas-reineke/indent-blankline.nvim'", []]
     }
 }
-```
-
-## Please report any bugs
-## Feel free to suggest plugins to add
